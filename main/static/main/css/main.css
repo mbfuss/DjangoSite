@@ -1,0 +1,99 @@
+/* Задний фон */
+body{
+    background: #2c2c2c;
+}
+
+/* Настройка стиля для aside */
+aside{
+    float: left;
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    height: 230vh;
+    color: #ffffff;
+    border-right: 5px solid #4d4d4d;
+}
+
+/* Настройка img в aside */
+aside img{
+    width: 200px;
+    float: left;
+    position: relative;
+    top: -5px;
+    right: -12px;
+}
+
+/* Обращаемся к <span class="logo">SPACE.COM</span> и настраиваем шрифт */
+aside .logo{
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+/* Настройка блока <h3>Навигация</h3> */
+aside h3{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Настройка блока ul */
+/* В целом */
+aside ul{list-style: none;}
+/* К отдельному эл-ту */
+aside ul li {
+    color: #ffffff;
+    display: block;
+    margin-top: 20px;
+    transition: transform .6s ease; /* Плвность только к transform: scale(1.1); */
+}
+
+/*Настройка при наведении */
+aside ul li:hover, aside ul a:hover{
+    color: #2e39db;
+    transform: scale(1.1);
+
+}
+/*Убрать подчеркивание у ссылок */
+a, u {
+    text-decoration: none;
+  }
+
+/*Настройка ВСЕГО текста в index класса .features*/
+main .features{
+    float: left;
+    color: #ffffff;
+    margin-top: 50px;
+    text-align: center;
+    width: 75%;
+}
+
+.features h1{font-size: 60px;}
+.features p{max-width: 400px; margin: 20px auto}
+.features h6{font-size: 15px;}
+
+.alert-dark{
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 36%;
+    text-align: left;
+
+}
+
+form{
+    margin-left: 25%;
+    width: 600px;
+    margin-top: 50px;
+}
+
+.form-label{
+    width: 250px;
+    margin-top: 20px;
+}
+.features h2{
+    font-size: 60px;
+    margin-left: -6%;
+
+}

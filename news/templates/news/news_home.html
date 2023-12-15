@@ -1,0 +1,35 @@
+<!--Папка templates объеденяется со всеми папками-->
+{% extends 'main/layout.html' %} # наследуемся от layout.html
+
+{% block title %}Новости на сайте{% endblock %}
+
+{% block content %}
+        <!-- Категории -->
+    {% if cat_selected == 0 %}
+        <li class="selected"><s>Все категории</s></li>
+    {% else %}
+        <li><a href=""></s>Все категории</s></a></li>
+    {% endif %}
+    <!-- Формируем рубрики -->
+    {% for c in cats %}
+        {% if c.pk == cat_selected %}
+            <li class="selected">{{c.name}}</li>
+        {% else %}
+            <li><a href="{{ c.get_absolute_url }}">{{c.name}}</a></li>
+        {% endif %}
+    {% endfor %}
+    
+    <li><a href="{{ c.get_absolute_url }}">{{c.name}}</a></li>
+    <div class="features">
+        <h1>Новости на сайте</h1>
+        {% for el in news %}
+            <div class="alert alert-dark">
+            <h6>{{ el.date }}</h6>
+            <h3>{{el.title}}</h3>
+            <p>{{el.anons}}</p>
+            <a href="{% url 'news-detail' el.id %}" class="btn btn-outline-primary">Подробнее</a>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

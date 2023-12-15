@@ -1,0 +1,14 @@
+<!--Папка templates объеденяется со всеми папками-->
+{% extends 'main/layout.html' %} # наследуемся от layout.html
+
+{% block title %}Новости на сайте{% endblock %}
+
+{% block content %}
+    <div class="features">
+       <h1>{{ article.title }}</h1>
+       <h6>{{ article.date }}</h6>
+       <p>{{ article.full_text }}</p>
+       <a href="{% url 'news-delete' article.id %}" class="btn btn-outline-danger">Удалить</a>
+       <a href="{% url 'news-update' article.id %}" class="btn btn-outline-primary">Редактировать</a>
+    </div>
+{% endblock %}
